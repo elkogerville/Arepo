@@ -85,6 +85,7 @@
 #include "../../main/proto.h"
 
 #include "voronoi.h"
+#include "../../utils/mpz_extension.h" // beware, needs to be after voronoi.h
 
 #if defined(TWODIMS) && !defined(ONEDIMS) /* will only be compiled in 2D case */
 
