@@ -64,6 +64,7 @@
  */
 
 #include <gsl/gsl_rng.h>
+#include <float.h>
 #include <math.h>
 #include <mpi.h>
 #include <signal.h>
