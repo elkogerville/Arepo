@@ -44,6 +44,8 @@
 #include "../main/proto.h"
 
 #include "../mesh/voronoi/voronoi.h"
+#include "../utils/mpz_extension.h" // beware, needs to be after voronoi.h
+
 
 #if USEDBITS > 31
 
