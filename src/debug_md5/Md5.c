@@ -68,7 +68,7 @@
 #include "Md5.h"
 
 /* forward declaration */
-static void Transform();
+static void Transform(UINT4 *buf, UINT4 *in);
 static void MD5Update(MD5_CTX *mdContext, unsigned char *inBuf, unsigned int inLen);
 
 static unsigned char PADDING[64] = {0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -205,8 +205,7 @@ void MD5Final(MD5_CTX *mdContext)
 
 /* Basic MD5 step. Transform buf based on in.
  */
-static void Transform(buf, in) UINT4 *buf;
-UINT4 *in;
+static void Transform(UINT4 *buf, UINT4 *in)
 {
   UINT4 a = buf[0], b = buf[1], c = buf[2], d = buf[3];
 
