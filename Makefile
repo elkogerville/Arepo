@@ -156,6 +156,7 @@ OBJS =   debug_md5/calc_checksum.o \
          hydro/update_primitive_variables.o \
          init/begrun.o \
          init/density.o \
+         init/endrun.o \
          init/init.o \
          io/global.o \
          io/hdf5_util.o \
@@ -352,7 +353,7 @@ $(EXEC): $(OBJS)
 	$(LINKER) $(OPTIMIZE) $(OBJS) $(LIBS) -o $(EXEC)
 
 lib$(LIBRARY).a: $(filter-out $(BUILD_DIR)/main/main.o,$(OBJS))
-	$(AR) -rcs lib$(LIBRARY).a $(OBJS)
+	$(AR) -rcs lib$(LIBRARY).a $^
 
 clean:
 	@echo Cleaning all build files...
