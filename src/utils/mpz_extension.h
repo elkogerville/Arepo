@@ -1,9 +1,13 @@
+/*
+ * If included, must be included after voronoi.h
+ */
+
 #ifndef MPZ_EXTENSION_H
 #define MPZ_EXTENSION_H
 
 #include <gmp.h>
 
-#if USEDBITS > 31
+#if USEDBITS > 31 /* defined in voronoi.h */
 typedef signed long long int IntegerMapType;
 void MY_mpz_set_si(mpz_t dest, signed long long int val);
 void MY_mpz_mul_si(mpz_t prod, mpz_t mult, signed long long int val);
