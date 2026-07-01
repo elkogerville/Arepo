@@ -343,7 +343,7 @@ static void Transform(UINT4 *buf, UINT4 *in)
    Order is from low-order byte to high-order byte of digest.
    Each byte is printed with high-order hexadecimal digit first.
  */
-static void MDPrint(mdContext) MD5_CTX *mdContext;
+static void MDPrint(MD5_CTX *mdContext)
 {
   int i;
 
@@ -397,7 +397,7 @@ static void MDTimeTrial()
    Prints out message digest, a space, the string (in quotes) and a
    carriage return.
  */
-static void MDString(inString) char *inString;
+static void MDString(char *inString)
 {
   MD5_CTX mdContext;
   unsigned int len = strlen(inString);
