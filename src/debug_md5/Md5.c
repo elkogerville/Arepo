@@ -413,7 +413,7 @@ static void MDString(char *inString)
    Prints out message digest, a space, the file name, and a carriage
    return.
  */
-static void MDFile(filename) char *filename;
+static void MDFile(char *filename)
 {
   FILE *inFile = fopen(filename, "rb");
   MD5_CTX mdContext;
